@@ -17,6 +17,11 @@ D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.TagHelpers.input.cache
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.TagHelpers.output.cache
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.RazorCoreGenerate.cache
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Create.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Delete.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Details.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Edit.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.cshtml.g.cs
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
@@ -34,8 +39,4 @@ D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.pdb
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.genruntimeconfig.cache
 D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.csproj.CopyComplete
-D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Create.cshtml.g.cs
-D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Delete.cshtml.g.cs
-D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Details.cshtml.g.cs
-D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Edit.cshtml.g.cs
-D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\bin\Debug\netcoreapp2.1\libman.json

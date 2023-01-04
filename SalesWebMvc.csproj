@@ -5,6 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20230103015057_Initial.cs" />
+    <Compile Remove="Migrations\20230103015057_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20230104003307_Migration2.cs" />
+    <Compile Remove="Migrations\20230104003307_Migration2.Designer.cs" />
+    <Compile Remove="Migrations\20230104023116_DbGenerate.cs" />
+    <Compile Remove="Migrations\20230104023116_DbGenerate.Designer.cs" />
+    <Compile Remove="Migrations\20230104023249_DbGenerate.cs" />
+    <Compile Remove="Migrations\20230104023249_DbGenerate.Designer.cs" />
+    <Compile Remove="Migrations\20230104031358_MigrationTest.cs" />
+    <Compile Remove="Migrations\20230104031358_MigrationTest.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />

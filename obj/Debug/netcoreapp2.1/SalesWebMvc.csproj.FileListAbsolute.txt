@@ -82,3 +82,5 @@ C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.pdb
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.genruntimeconfig.cache
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\SalesWebMvc.csproj.CopyComplete
+C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Index.cshtml.g.cs
+C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Create.cshtml.g.cs

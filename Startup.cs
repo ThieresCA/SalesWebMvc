@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
+using SalesWebMvc.Services;
 
 namespace SalesWebMvc
 {
@@ -43,6 +44,7 @@ namespace SalesWebMvc
             //criando um escopo de SeedingService, ao usar um AddScope será criado uma unica instância do objeto dentro, que sempre retornará o mesmo objeto
             //e assim que a requisição terminar o objeto será descartado
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -16,7 +16,7 @@ namespace SalesWebMvc.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
-        public double BaseSalaty { get; set; }
+        public double BaseSalary { get; set; }
         public Department Department { get; set; }
         //implementando a associação de 1 para muitos
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
@@ -25,12 +25,12 @@ namespace SalesWebMvc.Models
         {
         }
 
-        public Seller(string name, string email, DateTime birthDate, double baseSalaty, Department department)
+        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department)
         {
             Name = name;
             Email = email;
             BirthDate = birthDate;
-            BaseSalaty = baseSalaty;
+            BaseSalary = baseSalary;
             Department = department;
         }
 

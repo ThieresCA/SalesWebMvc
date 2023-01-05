@@ -1,0 +1,60 @@
+﻿@model SalesWebMvc.Models.Seller
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Tem certeza que quer deletar esse registro?</h3>
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*Esse mostra o nome do atributo ou do display dado dentro do model utilizado*@
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @*Esse mostra o valor de dentro do atributo*@
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @*Esse mostra o nome do atributo ou do display dado dentro do model utilizado*@
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @*Esse mostra o valor de dentro do atributo*@
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @*Esse mostra o nome do atributo ou do display dado dentro do model utilizado*@
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd>
+            @*Esse mostra o valor de dentro do atributo*@
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt>
+            @*Esse mostra o nome do atributo ou do display dado dentro do model utilizado*@
+            @Html.DisplayNameFor(model => model.DepartmentId)
+        </dt>
+        <dd>
+            @*Esse mostra o valor de dentro do atributo*@
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+        <dt>
+            @*Esse mostra o nome do atributo ou do display dado dentro do model utilizado*@
+            @Html.DisplayNameFor(model => model.BaseSalary)
+        </dt>
+        <dd>
+            @*Esse mostra o valor de dentro do atributo*@
+            @Html.DisplayFor(model => model.BaseSalary)
+        </dd>
+    </dl>
+    <div>
+    <a class="btn btn-primary" asp-action="Index">Voltar para o Menu</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    </div>
+</div>
+

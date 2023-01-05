@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,12 +14,17 @@ namespace SalesWebMvc.Models
         //inserido para que o Identity seja criado automaticamente, permitindo que o construtor não precise do parametro Id
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [DisplayName("Nome")]
         public string Name { get; set; }
         public string Email { get; set; }
+        [DisplayName("Data de Nascimento")]
         public DateTime BirthDate { get; set; }
+        [DisplayName("Salário Base")]
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
         //implementando a associação de 1 para muitos
+        [DisplayName("Departamento")]
+        public int DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()

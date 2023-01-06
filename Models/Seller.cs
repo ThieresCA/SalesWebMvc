@@ -15,29 +15,41 @@ namespace SalesWebMvc.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [DisplayName("Nome")]
+        [Required(ErrorMessage = "o campo {0} deve ser preenchido")]
         public string Name { get; set; }
+        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "o campo {0} deve ser preenchido")]
+        [EmailAddress(ErrorMessage = "entre com um {0} válido")]
         public string Email { get; set; }
+        [Required(ErrorMessage = "o campo {0} deve ser preenchido")]
         [DisplayName("Data de Nascimento")]
+        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
+        [Required(ErrorMessage = "o campo {0} deve ser preenchido")]
         [DisplayName("Salário Base")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
         //implementando a associação de 1 para muitos
         [DisplayName("Departamento")]
         public int DepartmentId { get; set; }
+        [DisplayName("Atividade")]
+        [DefaultValue(1)]
+        public int Active { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
         {
         }
 
-        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department)
+        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department, int active)
         {
             Name = name;
             Email = email;
             BirthDate = birthDate;
             BaseSalary = baseSalary;
             Department = department;
+            Active = active;
         }
 
         public void AddSales(SalesRecord sr)

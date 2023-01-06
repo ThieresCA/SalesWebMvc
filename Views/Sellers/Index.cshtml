@@ -25,6 +25,9 @@
                 @Html.DisplayNameFor(model => model.BaseSalary)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
             </th>
         </tr>
     </thead>
@@ -43,6 +46,16 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.BaseSalary)
+                </td>
+                <td>
+                    @if (item.Active == 1)
+                    {
+                        <span>Ativo</span>
+                    }
+                    else
+                    {
+                        <span>Inativo</span>
+                    }
                 </td>
                 <td>
                     @*serve para chamar a ação Edit, com a asp-route-id passando o Id do item selecionado*@

@@ -4,6 +4,7 @@ using SalesWebMvc.Models.ViewModels;
 using SalesWebMvc.Services;
 using SalesWebMvc.Services.Exceptions;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace SalesWebMvc.Controllers
 {
@@ -40,6 +41,11 @@ namespace SalesWebMvc.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Seller seller)
         {
+            //validação feita para que caso o JS seja desativado no navegador não ocorra quebra de confiabilidade nos dados
+            if (!ModelState.IsValid)
+            {
+                return View(seller);
+            }
             //chamando o método Insert da classe SallerServices
             _sellerServices.Insert(seller);
             return RedirectToAction(nameof(Index));
@@ -47,14 +53,14 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Delete(int? id)
         {
-            if(id == null)
+            if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { Message = "Id não fornecido" });
             }
             var obj = _sellerServices.FindById(id.Value);
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { Message = "Objeto não encontrado" });
             }
             return View(obj);
         }
@@ -69,7 +75,17 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Details(int? id)
         {
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "Id não fornecido" });
+            }
+
             var obj = _sellerServices.FindById(id.Value);
+            if (obj == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "Id não encontrado" });
+            }
+
             return View(obj);
         }
 
@@ -77,13 +93,13 @@ namespace SalesWebMvc.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { Message = "Id nulo ou não fornecido" });
             }
 
             var obj = _sellerServices.FindById(id.Value);
-            if(obj == null)
+            if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { Message = "não foi encontrado um Id" });
             }
 
             List<Department> departments = _departmentServices.FindAll();
@@ -93,26 +109,45 @@ namespace SalesWebMvc.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int? id, Seller seller)
+        public IActionResult Edit(int id, Seller seller)
         {
-            if(id == null)
+            //validação feita para que caso o JS seja desativado no navegador não ocorra quebra de confiabilidade nos dados
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                return View(seller);
             }
 
+            if (!ModelState.IsValid)
+            {
+                var departments = _departmentServices.FindAll();
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+                return View(viewModel);
+            }
+            if (id != seller.Id)
+            {
+                return RedirectToAction(nameof(Error), new { message = "Id não corresponde a um vendedor" });
+            }
             try
             {
-            _sellerServices.Update(seller);
-            return RedirectToAction("Index");
+                _sellerServices.Update(seller);
+                return RedirectToAction(nameof(Index));
             }
-            catch (NotFoundException e)
+            catch (DbConcurrencyException e)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = e.Message });
             }
-            catch(DbConcurrencyException e)
+        }
+
+        public IActionResult Error(string message)
+        {
+            var viewModel = new ErrorViewModel
             {
-                return BadRequest();
-            }
+                Message = message,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+            return View(viewModel);
         }
     }
 }
+
+

@@ -27,6 +27,15 @@ namespace SalesWebMvc.Controllers
             //passando o list como parametro para que o view retorne um IActionResult contendo a Lista
             return View(list);
         }
+
+        public IActionResult Inactives()
+        {
+            //controlador acessa o model pegou os dados e armazenou na variavel
+            var list = _sellerServices.FindAll();
+            //passando o list como parametro para que o view retorne um IActionResult contendo a Lista
+            return View(list);
+        }
+
         public IActionResult Create()
         {
             //buscando no banco todos os departamentos
@@ -44,7 +53,13 @@ namespace SalesWebMvc.Controllers
             //validação feita para que caso o JS seja desativado no navegador não ocorra quebra de confiabilidade nos dados
             if (!ModelState.IsValid)
             {
-                return View(seller);
+                var department = _departmentServices.FindAll();
+                var viewModel = new SellerFormViewModel
+                {
+                    Departments = department,
+                    Seller = seller
+                };
+                return View(viewModel);
             }
             //chamando o método Insert da classe SallerServices
             _sellerServices.Insert(seller);
@@ -69,7 +84,9 @@ namespace SalesWebMvc.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
-            _sellerServices.Remove(id);
+            var seller = _sellerServices.FindById(id);
+            seller.Active = false;
+            _sellerServices.Update(seller);
             return RedirectToAction("Index");
         }
 
@@ -114,7 +131,13 @@ namespace SalesWebMvc.Controllers
             //validação feita para que caso o JS seja desativado no navegador não ocorra quebra de confiabilidade nos dados
             if (!ModelState.IsValid)
             {
-                return View(seller);
+                var department = _departmentServices.FindAll();
+                var viewModel = new SellerFormViewModel
+                {
+                    Departments = department,
+                    Seller = seller
+                };
+                return View(viewModel);
             }
 
             if (!ModelState.IsValid)

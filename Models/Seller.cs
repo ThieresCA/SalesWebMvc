@@ -34,15 +34,15 @@ namespace SalesWebMvc.Models
         [DisplayName("Departamento")]
         public int DepartmentId { get; set; }
         [DisplayName("Atividade")]
-        [DefaultValue(1)]
-        public int Active { get; set; }
+        [DefaultValue(true)]
+        public bool Active { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
         {
         }
 
-        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department, int active)
+        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department, bool active)
         {
             Name = name;
             Email = email;

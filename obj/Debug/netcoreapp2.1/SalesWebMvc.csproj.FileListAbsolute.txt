@@ -92,3 +92,4 @@ D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Delete.cshtml.g.cs
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Details.cshtml.g.cs
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Edit.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Inactives.cshtml.g.cs

@@ -18,10 +18,12 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-primary" style="margin-right: 5px" />
-        <a asp-action="Index" class="btn btn-primary">Back to List</a>
     </form>
+</div>
+<div style="margin-top: 10px;">
+    <a asp-action="Index">Voltar para o Menu</a>
 </div>

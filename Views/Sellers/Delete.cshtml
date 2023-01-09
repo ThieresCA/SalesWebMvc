@@ -53,9 +53,18 @@
         </dd>
     </dl>
     <form asp-action="Delete">
-    <a class="btn btn-primary" asp-action="Index" style="margin-right: 5px">Voltar para o Menu</a>
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" />
+        @if (!Model.Active)
+        {
+            <input type="submit" asp-action="Delete" class="btn btn-danger" value="Ativar" />
+        }
+        else
+        {
+            <input type="submit" asp-action="Delete" class="btn btn-danger" value="Inativar" />
+        }
     </form>
+</div>
+<div style="margin-top: 10px;">
+    <a asp-action="Index" style="margin-right: 5px">Voltar para o Menu</a>
 </div>
 

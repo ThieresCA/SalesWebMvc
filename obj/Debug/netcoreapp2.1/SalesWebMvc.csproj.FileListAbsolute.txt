@@ -97,3 +97,7 @@ C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\Index.cshtml.g.cs
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\GroupingSearch.cshtml.g.cs
 C:\Users\CODE-DEV-11.CODEN-APP\source\repos\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\SimpleSearch.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\GroupingSearch.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\Index.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\SimpleSearch.cshtml.g.cs
+D:\Thieres\Documents\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\SearchById.cshtml.g.cs

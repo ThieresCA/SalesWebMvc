@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SalesWebMvc.Models.ViewModels.SellerlistViewModel
+
+@{
     ViewData["Title"] = "Registro de Vendas";
 }
 
@@ -45,6 +47,27 @@
                     <label for="maxDate" class="col-lg-2 control-label">Max Data</label>
                     <div class="col-lg-10">
                         <input type="date" name="maxDate" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Procurar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="SearchById">
+            <fieldset>
+                <legend>Busca por Vendedor</legend>
+                <div class="form-group">
+                    <label asp-for="@Model.Sellers" class="control-label col-lg-2 control-label"></label>
+                    <div class="col-lg-10">
+                        <select asp-items="@(new SelectList(@Model.Sellers, "Id","Name"))" class="form-control" name="id"></select>
                     </div>
                 </div>
                 <div class="form-group">

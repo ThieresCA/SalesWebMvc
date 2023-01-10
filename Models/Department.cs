@@ -35,7 +35,7 @@ namespace SalesWebMvc.Models
         }
 
         //criando um método que some todas as vendas do departamento dentro do range de data
-        public double DepartmentTotalSales(DateTime initial, DateTime final )
+        public double TotalSales(DateTime initial, DateTime final )
         {
             //usando o método TotalSales da classe Seller para retornar as vendas de cada vendedor dentro do range de data
             return Sellers.Sum(seller => seller.TotalSales(initial, final));

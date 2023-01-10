@@ -23,6 +23,7 @@ namespace SalesWebMvc.Services
             //retornar todos os vendedores
             return await _context.Seller.ToListAsync();
         }
+
         public async Task InsertAsync(Seller obj)
         {
             _context.Add(obj);

@@ -29,6 +29,7 @@ namespace SalesWebMvc.Models
         [DisplayName("Salário Base")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double BaseSalary { get; set; }
+        [DisplayName("Departamento")]
         public Department Department { get; set; }
         //implementando a associação de 1 para muitos
         [DisplayName("Departamento")]

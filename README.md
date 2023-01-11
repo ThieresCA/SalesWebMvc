@@ -4,4 +4,4 @@ O projeto foi feito no .Net 2.1
 
 E utilizado o Entity Framwork para gerar o banco de dados.
 
-para atualizar o banco de dados use o comando Update-Database no cli do package manager.
+Para atualizar o banco de dados use o comando Update-Database no cli do package manager.

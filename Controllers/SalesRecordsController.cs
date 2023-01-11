@@ -47,8 +47,8 @@ namespace SalesWebMvc.Controllers
 
         public async Task<IActionResult> SearchById(int id)
         {
-            var teste = await _salesRecordServices.FindBySellerId(id);
-            return View(teste);
+            var result = await _salesRecordServices.FindBySellerId(id);
+            return View(result);
         }
     }
 }
